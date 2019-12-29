@@ -13,14 +13,14 @@ const util = require('util');
  */
 function activate(context) {
 	const HTTPMethods = ['GET', 'POST', 'PUT', 'DELETE'];
-	fs.writeFileSync(`${__dirname}/Response.json`, 'Loading...');
 
 	let disposable = vscode.commands.registerTextEditorCommand('extension.restcall', function (editor) {
 		// Get active line and it's content
 		const activeLine = editor.selection.active.line;
 		let lineContent = editor.document.lineAt(activeLine)['_text'];
 		lineContent = lineContent.trim();
-
+		fs.writeFileSync(`${__dirname}/Response.json`, 'Loading...');
+		
 		// check content must be in valid format
 		if (lineContent !== '') {
 			const HTTPRequest = lineContent.split(" "); // Get all parameters
@@ -28,8 +28,8 @@ function activate(context) {
 			if (HTTPRequest.length >= 3) { // Content atleast have HTTP method and URI `// {HTTP_METHOD} {URI}`
 				const givenHTTPMethod = HTTPRequest[1];
 				const givenEndPoint = HTTPRequest[2];
-				let givenHeader = HTTPRequest[3] || {};
-				let givenBody = HTTPRequest[4] || {};
+				let givenHeader = HTTPRequest[3] || null;
+				let givenBody = HTTPRequest[4] || null;
 				const givenOnlyKey = HTTPRequest[5] || null;
 
 				const index = HTTPMethods.indexOf(givenHTTPMethod);
@@ -39,6 +39,7 @@ function activate(context) {
 					method: givenHTTPMethod,
 					url: givenEndPoint,
 				};
+				
 				// set Header
 				givenHeader = JSON.parse(givenHeader);
 				configObj.headers = givenHeader || {};

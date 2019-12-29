@@ -12,6 +12,10 @@
 	"activationEvents": [
 		"onCommand:extension.restcall"
 	],
+	"repository": {
+		"url": "https://github.com/csainath07/restcall"
+	},
+	"publisher": "sainath07",
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [

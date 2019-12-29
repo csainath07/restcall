@@ -16,6 +16,7 @@
 		"url": "https://github.com/csainath07/restcall"
 	},
 	"publisher": "sainath07",
+	"icon": "images/api.png",
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [

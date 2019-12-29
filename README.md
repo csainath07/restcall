@@ -18,6 +18,6 @@ RestCall allows you execute REST APIs and view it's response in Visual Studio Co
 
 > Enter `RestCall` and select command to call Rest Api
 
-![open command prompt](https://github.com/csainath07/restcall/blob/master/images/usage1.png)
+![open command prompt](./images/usage1.png)
 
-![api response](https://github.com/csainath07/restcall/blob/master/images/usage2.png)
+![api response](./images/usage2.png)

@@ -4,8 +4,9 @@ RestCall allows you execute REST APIs and view it's response in Visual Studio Co
 ## Usage
 
 ```
-// GET https://jsonplaceholder.typicode.com/posts ${HEADER_OBJECT} ${BODY} {EXTRACT_KEY}
+// GET https://jsonplaceholder.typicode.com/posts ${HEADER_OBJECT} ${BODY_OBJECT} {EXTRACT_KEY}
 ```
+> `HEADER_OBJECT` and `BODY_OBJECT` must be `inline` and without `space`
 
 * `//` Single line comment, to avoid syntax error (**required**)
 * `GET` Http methods, it must be `GET`, `POST`, `PUT` or `DELETE` (**required**)

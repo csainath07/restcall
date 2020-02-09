@@ -2,7 +2,7 @@
 	"name": "restcall",
 	"displayName": "RestCall",
 	"description": "RestCall allows you execute REST APIs and view it's response in Visual Studio Code directly",
-	"version": "0.2.0",
+	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.41.0"
 	},
